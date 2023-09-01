@@ -1,29 +1,15 @@
 import React from 'react';
 import './App.css';
 
-type Order = {
-    title: string;
-    quantity: number;
+type PrintTitle = (title: string) => string;
+
+const printTitle: PrintTitle = (title) => {
+    return title;
 };
 
-const order: Order = {
-    title: 'margarita',
-    quantity: 10,
-};
+console.log(printTitle('cheese'));
 
-const orders: Order[] = [
-    {
-        title: 'margarita',
-        quantity: 10,
-    },
-    {
-        title: 'margarita',
-        quantity: 10,
-    },
-];
-
-let variable: null | number = null;
-variable = 22;
+const test: unknown = 'test';
 
 function App() {
     return <div className="App">app</div>;
