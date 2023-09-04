@@ -1,15 +1,45 @@
 import React from 'react';
 import './App.css';
 
-type PrintTitle = (title: string) => string;
+// type Order = {
+//     title: string;
+//     quantity?: number;
+// };
 
-const printTitle: PrintTitle = (title) => {
-    return title;
+// interface MyOrder {
+//     title: string;
+//     quantity?: number;
+// }
+
+type X = {
+    a: string;
+    b: number;
 };
 
-console.log(printTitle('cheese'));
+type Y = X & {
+    c: string;
+    d: number;
+};
 
-const test: unknown = 'test';
+let y: Y = {
+    a: 'meow',
+    c: 'joke',
+    b: 8,
+    d: 22,
+};
+
+interface Auto {
+    country: string;
+}
+
+interface BMW extends Auto {
+    year: number;
+}
+
+let bmw: BMW = {
+    country: 'germany',
+    year: 2023,
+};
 
 function App() {
     return <div className="App">app</div>;
