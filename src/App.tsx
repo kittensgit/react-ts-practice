@@ -1,48 +1,16 @@
-import React from 'react';
+import React, { FC } from 'react';
 import './App.css';
+import AddPizzaForm from './components/AddPizzaForm';
 
-// type Order = {
-//     title: string;
-//     quantity?: number;
-// };
-
-// interface MyOrder {
-//     title: string;
-//     quantity?: number;
-// }
-
-type X = {
-    a: string;
-    b: number;
+const App: FC = () => {
+    return (
+        <div className="App">
+            <div className="wrap">
+                <span className="heading">Our pizzeria</span>
+                <AddPizzaForm />
+            </div>
+        </div>
+    );
 };
-
-type Y = X & {
-    c: string;
-    d: number;
-};
-
-let y: Y = {
-    a: 'meow',
-    c: 'joke',
-    b: 8,
-    d: 22,
-};
-
-interface Auto {
-    country: string;
-}
-
-interface BMW extends Auto {
-    year: number;
-}
-
-let bmw: BMW = {
-    country: 'germany',
-    year: 2023,
-};
-
-function App() {
-    return <div className="App">app</div>;
-}
 
 export default App;
