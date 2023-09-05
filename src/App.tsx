@@ -19,6 +19,10 @@ const App: FC = () => {
         );
     };
 
+    const deletePizza = (idPizza: number) => {
+        setPizzasList(pizzasList.filter((pizza) => pizza.id !== idPizza));
+    };
+
     return (
         <div className="App">
             <div className="wrap">
@@ -27,6 +31,7 @@ const App: FC = () => {
                 <DisplayPizzas
                     pizzaList={pizzasList}
                     updatePizza={updatePizza}
+                    deletePizza={deletePizza}
                 />
             </div>
         </div>
